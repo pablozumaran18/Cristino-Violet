@@ -1,0 +1,33 @@
+{% extends 'ventas/index.html' %}
+
+{% load static %}
+
+
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido a la página de inicio</h1>
+
+    <!-- Video 1 -->
+    <video width="640" height="480" controls>
+        <source src="{% static 'vido/video1' %}" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+    <!-- Video 2 -->
+    <video width="640" height="480" controls>
+        <source src="{% static 'vido/video2.mp4' %}" type="video/mp4">
+        Tu navegador no soporta la etiqueta de video.
+    </video>
+
+</body>
+</html> 
+
+{% endblock %} 

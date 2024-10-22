@@ -70,3 +70,7 @@ def eliminar_del_carrito(request, producto_id):
         messages.success(request, "Producto eliminado del carrito.")
 
     return redirect('ventas:carrito')
+
+
+def inicio(request):
+    return render(request, 'ventas/inicio.html')
