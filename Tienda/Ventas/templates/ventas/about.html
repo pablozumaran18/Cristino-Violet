@@ -1,0 +1,56 @@
+{% extends 'ventas/index.html' %}
+
+{% block title %}
+Acerca de Nosotros
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<div class="container py-5">
+    <div class="row">
+        <div class="col-lg-6 m-auto">
+            <h1 class="h1 text-success">Acerca de Cristino Violet</h1>
+            <p>
+                Cristino Violet es una marca innovadora que se enfoca en la creación de ropa streetwear, 
+                representando la creatividad y los valores de artistas y personas que siguen esta cultura. 
+                Nuestra misión es ofrecer colecciones exclusivas que no solo destaquen por su calidad, 
+                sino que también inspiren y conecten a nuestra comunidad con las tendencias más creativas.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <img class="img-fluid rounded" src="{% static 'img/about_us.jpg' %}" alt="Sobre nosotros">
+        </div>
+    </div>
+
+    <div class="row pt-5">
+        <div class="col-lg-6">
+            <h2>Nuestra Historia</h2>
+            <p>
+                Fundada en Arica, Cristino Violet surgió como una respuesta a la necesidad de ropa que refleje la 
+                esencia artística de su comunidad. Desde nuestros inicios, hemos trabajado con artistas locales 
+                y nacionales, creando colecciones que capturan el espíritu creativo que nos define.
+            </p>
+        </div>
+        <div class="col-lg-6">
+            <h2>Nuestra Misión</h2>
+            <p>
+                En Cristino Violet, nos esforzamos por crear prendas únicas que no solo sean visualmente atractivas, 
+                sino que también inspiren a nuestros clientes. Nuestra visión va más allá de la moda; queremos establecer 
+                un espacio donde la creatividad sea el centro de todo lo que hacemos.
+            </p>
+        </div>
+    </div>
+
+    <div class="row pt-5">
+        <div class="col-lg-12">
+            <h2>Colaboraciones</h2>
+            <p>
+                Trabajamos con una variedad de artistas, influencers y diseñadores que comparten nuestra pasión 
+                por la creatividad. Cada colección es una colaboración, un reflejo del talento y la visión de quienes 
+                forman parte de nuestro equipo.
+            </p>
+        </div>
+    </div>
+</div>
+{% endblock %}

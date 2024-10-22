@@ -1,0 +1,16 @@
+{% extends 'ventas/index.html' %}
+
+{% block content %}
+
+<h2>Lista de productos</h2>
+<ul>
+    {% for producto in productos %}
+    <li>
+        <strong>{{ producto.nombre }}</strong> - {{ producto.precio }} USD
+        <br>
+        <a href="{% url 'agregar_al_carrito' producto.id %}">Agregar al carrito</a>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock %} 

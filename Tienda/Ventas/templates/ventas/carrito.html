@@ -1,0 +1,43 @@
+{% extends 'ventas/index.html' %}
+
+{% block content %}
+
+
+<h1 class="h1 text-success">Tu carrito</h1>
+
+<ul>
+    {% for item in carrito.carritoitem_set.all %}
+    <li>
+        {{ item.producto.nombre }} ({{ item.cantidad }}) - {{ item.producto.precio }} USD
+    </li>
+    {% endfor %}
+
+
+    {% if messages %}
+    <div>
+        {% for message in messages %}
+            <div class="alert {% if message.tags %}alert-{{ message.tags }}{% endif %}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+</ul>
+
+<ul>
+    {% for item in items %}
+    <li>
+        <strong>{{ item.producto.nombre }}</strong> - {{ item.cantidad }} x {{ item.producto.precio }} USD
+        <br>
+        <a href="{% url 'ventas/eliminar_del_carrito' item.producto.id %}">Eliminar uno</a> <!-- Botón para reducir/eliminar -->
+    </li>
+    {% endfor %}
+</ul>
+
+<h3>Total: {{ carrito.get_total_price }} USD</h3>
+
+<a href="#">Procesar compra</a>
+
+
+{% endblock %} 
